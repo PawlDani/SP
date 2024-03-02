@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# Expo asset cache
+/.expo/
+
+# Environment variables
+.env
+
+# iOS specific
+ios/build/
+ios/Pods/
+*.xcworkspace
+*.xcuserstate
+
+# Android specific
+android/.gradle
+android/app/build
+
+# Others
+.DS_Store
+*.log
+
+.vscode/
