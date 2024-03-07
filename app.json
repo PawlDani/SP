@@ -3,13 +3,16 @@
     "name": "sp",
     "slug": "sp",
     "version": "1.0.0",
+    "extra": {
+      "supabaseUrl": "https://sasfamsisqjoiphtnbxj.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNhc2ZhbXNpc3Fqb2lwaHRuYnhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk0MDM3NTksImV4cCI6MjAyNDk3OTc1OX0.xB6eT33W5Awezy3osTWYZBMRzFQNu5vBNs2kWkbYOZI"
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#1e1e1e",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+        "backgroundColor": "#1e1e1e"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,11 +23,16 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#1e1e1e"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    }
+  },
+  "build": {
+    "babel": {
+      "include": ["@ui-kitten/components"]
     }
   }
 }
