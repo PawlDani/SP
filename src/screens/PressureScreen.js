@@ -19,7 +19,6 @@ function PressureScreen({ route, navigation }) {
 
   useEffect(() => {
     const fetchPressure = async () => {
-      // Record the start time of the fetch
       const startTime = Date.now();
 
       try {
@@ -44,20 +43,16 @@ function PressureScreen({ route, navigation }) {
         console.error("Error fetching pressure data", error);
         setPressure("Error fetching pressure data.");
       } finally {
-        // Determine how long the fetch took
         const endTime = Date.now();
         const fetchDuration = endTime - startTime;
 
-        // Set a minimum time for the loading indicator to be displayed (e.g., 2 seconds)
         const minLoadingTime = 500;
 
         if (fetchDuration < minLoadingTime) {
-          // If the fetch was too quick, wait until the minLoadingTime has elapsed
           setTimeout(() => {
             setLoading(false);
           }, minLoadingTime - fetchDuration);
         } else {
-          // Otherwise, just proceed to hide the loader
           setLoading(false);
         }
       }
@@ -73,8 +68,6 @@ function PressureScreen({ route, navigation }) {
       </View>
     );
   }
-
-  // The rest of your component rendering logic remains the same...
 
   return (
     <View style={styles.container}>
@@ -117,16 +110,14 @@ function PressureScreen({ route, navigation }) {
   );
 }
 
-// Styles remain unchanged
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#1e1e1e",
     justifyContent: "center",
     alignItems: "center",
-    paddingTop: 50, // Adjust the spacing from the top
-    paddingBottom: 30, // Adjust the spacing from the bottom
+    paddingTop: 50,
+    paddingBottom: 30,
   },
 
   upperContainer: {
